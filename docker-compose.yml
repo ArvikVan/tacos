@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  tacos:
+    image: "v-deploy.trmedia.corp:4567/khubetsov.ay/tacos:1.0.1"
+    restart: always
+    build:
+      dockerfile: ./Dockerfile
+      context: .
+    platform: linux/amd64
+    deploy:
+      resources:
+        limits:
+          memory: 5000M
+    logging:
+      options:
+        max-size: "5m"
+        max-file: '1'
