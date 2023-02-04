@@ -1,6 +1,7 @@
 package com.example.tacos.controller;
 
 import com.example.tacos.model.RegistrationForm;
+import com.example.tacos.model.User;
 import com.example.tacos.repo.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -26,7 +27,7 @@ public class RegistrationController {
     }
     @PostMapping
     public String processRegistration(RegistrationForm form) {
-        userRepos.save(form.toUser(passwordEncoder));
+        userRepos.save(new User());
         return "redirect:/login";
     }
 }

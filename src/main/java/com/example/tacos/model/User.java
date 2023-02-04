@@ -11,9 +11,8 @@ import javax.persistence.Id;
 import java.util.Collection;
 @Entity
 @Data
-@NoArgsConstructor(access= AccessLevel.PRIVATE, force=true)
+@NoArgsConstructor(access= AccessLevel.PUBLIC, force=true)
 @AllArgsConstructor
-@RequiredArgsConstructor
 public class User implements UserDetails {
     private static final long serialVersionUID = 1L;
     @Id

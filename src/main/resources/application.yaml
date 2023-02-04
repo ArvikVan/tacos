@@ -1,7 +1,7 @@
 spring:
   datasource:
     generate-unique-name: false
-    name: tacocloud
+    name: postgres
   jpa:
     hibernate:
       ddl-auto: create
